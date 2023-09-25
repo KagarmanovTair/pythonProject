@@ -11,61 +11,54 @@ a = int(input())
 for i in range(1,3):
      print(a+i)
 
-
-
-#zadanie4
+#task1.4
 try:
 
-    num1 = int(input("первое число: "))
-    num2 = int(input("второе число: "))
-    num3 = int(input("третье число: "))
-
+    num1 = int(input("enter first number: "))
+    num2 = int(input("enter second number: "))
+    num3 = int(input("enter third number: "))
 
     total = num1 + num2 + num3
 
-
     print(total)
 except ValueError:
-    print("Ошибка: целое число.")
+    print("Error: integer.")
 
-#zadanie5
+#task1.5
 try:
-    edge_length = float(input("длинa ребра куба: "))
+    edge_length = float(input("Cube edge length: "))
 
     volume = edge_length
-
     surface_area = 6 * edge_length
 
     print(f"Volume = {int(volume)}")
     print(f"Total surface area = {int(surface_area)}")
 except ValueError:
-    print("Ошибка:")
+    print("Error:")
 
-#zadanie6
+#task2.1
 try:
 
-    mandarins = int(input("мандарины: "))
-    students = int(input("школьникы: "))
+    mandarins = int(input("Tangerines: "))
+    students = int(input("SchoolChildren: "))
 
     per_student = mandarins // students
-
 
     remaining = mandarins % students
 
 
-    print(f"Каждый школьник получит {per_student} целых мандаринов.")
-    print(f"Останется {remaining} целых мандаринов в корзине.")
+    print(f"Each student receives {per_student} whole tangerines.")
+    print(f"There will be {remaining} whole tangerines left in the basket.")
 except ValueError:
-    print("Ошибка: Введите целые числа (количество мандаринов и школьников).")
+    print("Error: Enter integers (number of tangerines and schoolchildren).")
 
-#zadanie7
+#task2.2
 try:
 
-    number = input("четырёхзначное число: ")
+    number = input("Four-digit number: ")
 
-    # Проверка, что введенное значение имеет четыре цифры
     if len(number) != 4:
-        print("Ошибка: Введите четырёхзначное число.")
+        print("Error: enter four-digit number.")
     else:
 
         thousands = int(number[0])
@@ -79,49 +72,42 @@ try:
         print(f"The digit in the tens position is {tens}")
         print(f"The digit in the position of units is {units}")
 except ValueError:
-    print("Ошибка: Введите четырёхзначное число.")
+    print("Error: enter four-digit number.")
 
-    #zadanie8
+#task2.3
     try:
-        # ввод челиков на пленете
-        population = int(input("Введите количество населения вселенной: "))
-
-        # Проверка, является ли население нечетным числом
+        population = int(input("Enter the population of the universe: "))
         if population % 2 == 1:
             survivors = (population + 1) // 2
         else:
             survivors = population // 2
 
 
-        print(f"Число выживших: {survivors}")
+        print(f"Enter survivors {survivors}")
     except ValueError:
-        print("Ошибка: Введите целое число (количество населения вселенной).")
+        print("Error: Enter an integer (universe population).")
 
-#zadanie9
+#task2.4
 try:
-    # Ввод числа от пользователя
-    num = int(input("Введите целое число: "))
+    num = int(input("Enter integer: "))
 
-    # Выполнение побитового сдвига влево на один бит
     result = num << 1
 
-    # Проверка результата и вывод сообщения
     if result == 0:
-        print("Предупреждение: Результат равен нулю.")
+        print("Warning: The result is zero.")
     else:
-        print(f"Результат операции << равен {result}")
+        print(f"The result of the << operation is{result}")
 except ValueError:
-    print("Ошибка: Введите целое число.")
+    print("Error: Enter an integer.")
 
-#zadanie10
+#task2.5
 try:
 
-    num1 = float(input("Пожалуйста, введите первое число: "))
-    num2 = float(input("Пожалуйста, введите второе число: "))
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
 
 
-    operation = input("Пожалуйста, выберите операцию (+, -, *, /): ")
-
+    operation = input("Choose the operation (+, -, *, /): ")
 
     if operation == '+':
         result = num1 + num2
@@ -131,13 +117,13 @@ try:
         result = num1 * num2
     elif operation == '/':
         if num2 == 0:
-            print("Ошибка: Деление на ноль недопустимо.")
+            print("Error: Division by zero is not allowed.")
         else:
             result = num1 / num2
     else:
-        print("Ошибка: Неверная операция.")
+        print("Error: Invalid operation.")
 
     if operation in ('+', '-', '*', '/'):
         print(f"{num1} {operation} {num2} = {result}")
 except ValueError:
-    print("Ошибка: Введите числа в правильном формате.")
+    print("Error: Please enter numbers in the correct format.")
