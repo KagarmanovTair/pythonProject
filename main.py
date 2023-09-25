@@ -32,9 +32,9 @@ except ValueError:
 try:
     edge_length = float(input("длинa ребра куба: "))
 
-    volume = edge_length 3
+    volume = edge_length
 
-    surface_area = 6 * edge_length 2
+    surface_area = 6 * edge_length
 
     print(f"Volume = {int(volume)}")
     print(f"Total surface area = {int(surface_area)}")
