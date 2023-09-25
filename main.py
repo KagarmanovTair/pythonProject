@@ -83,6 +83,7 @@ except ValueError:
             survivors = population // 2
 
 
+
         print(f"Enter survivors {survivors}")
     except ValueError:
         print("Error: Enter an integer (universe population).")
